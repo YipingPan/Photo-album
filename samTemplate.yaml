@@ -12,11 +12,11 @@ Resources:
       FunctionName: hw3lf2
       Handler: hw3lf2.lambda_handler
       Runtime: python3.6
-      CodeUri: ./lambda_functions
+      #CodeUri: ./lambda_functions
       Description: 'Lambda function 2 in hw3'
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::973649192514:role/service-role/AWSCodePipelineServiceRole-us-east-1-ExamplePipeline'
+      Role: 'arn:aws:iam::973649192514:role/hw3lf2role'
       Environment:
         Variables:
           REGION: us-east-1
@@ -37,11 +37,11 @@ Resources:
       FunctionName: hw3lf1
       Handler: hw3lf1.lambda_handler
       Runtime: python3.6
-      CodeUri: ./lambda_functions
+      #CodeUri: ./lambda_functions
       Description: 'Lambda function 1 in hw3'
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::973649192514:role/service-role/AWSCodePipelineServiceRole-us-east-1-ExamplePipeline'
+      Role: 'arn:aws:iam::973649192514:role/hw3lf1role'
       Events:
         S3Trigger:
           Type: S3
